@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hero > .overlay, #success .wrapper > span {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero > .overlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  width: 100%;
+  height: 99.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.wrapper {
+  width: 92%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  line-height: 2.5rem;
+}
+
+.scale {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.scale:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  font-weight: bold;
+}
+
+.courses {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.courses * p {
+  line-height: 2.5rem;
+}
+
+#success {
+  text-align: center;
+}
+
+#success .wrapper > span {
+  margin-top: 15vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#success .wrapper > span span {
+  width: 33%;
+  margin-bottom: 4rem;
+}
+
+#success .wrapper > span span p {
+  margin-top: 2vh;
+}
+
+.grad {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#experience img {
+  height: 50vh;
+}
+
+#experience > .wrapper > .ratings {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  gap: 1rem;
+}
+
+#experience > .wrapper > .ratings span > h5 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#experience > .wrapper > .ratings span > p {
+  text-transform: capitalize;
+}
+
+#experience > .wrapper > .ratings > div {
+  margin: 2vh 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#experience > .wrapper > .ratings > div p {
+  font-weight: bold;
+}
+
+.green-underline::after {
+  content: '';
+  display: block;
+  width: 5%;
+  border-bottom: green 2px solid;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.green-underline::after .green-underline:after:hover {
+  width: 100%;
+}
+
+#courses > .wrapper p {
+  margin-bottom: 5vh;
+}
+
+#courses > .wrapper span {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.footer-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-wrapper div {
+  margin: 0 auto;
+}
+
+.footer-wrapper ul li {
+  margin-bottom: 1.2vh;
+}
+
+.footer-wrapper ul li a {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .courses,
+  .grad,
+  .ratings > div {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .courses .course,
+  .grad .course,
+  .ratings > div .course {
+    padding: 2rem;
+  }
+  #experience > .wrapper > .ratings {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .grad {
+    text-align: center;
+  }
+  .grad img {
+    margin-bottom: 2vh;
+  }
+  #courses {
+    text-align: center;
+  }
+  #courses ol {
+    text-align: initial;
+  }
+  #courses > .wrapper span,
+  #courses > .wrapper span * {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 0.5rem 0;
+  }
+  .footer-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .footer-wrapper div:last-child {
+    margin: 5vh 0;
+  }
+  .footer-wrapper input {
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=style.css.map */

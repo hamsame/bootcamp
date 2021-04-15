@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+%flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero > .overlay {
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  width: 100%;
+  height: 99.5%;
+  @extend %flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.wrapper {
+  width: 92%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  line-height: 2.5rem;
+}
+
+.scale {
+  transition: all 0.4s ease;
+  &:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+  }
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  * p {
+    line-height: 2.5rem;
+  }
+}
+
+#success {
+  text-align: center;
+  & .wrapper > span {
+    margin-top: 15vh;
+    @extend %flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span {
+      width: 33%;
+      margin-bottom: 4rem;
+      p {
+        margin-top: 2vh;
+      }
+    }
+  }
+}
+
+.grad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+#experience {
+  img {
+    height: 50vh;
+  }
+}
+
+#experience > .wrapper > .ratings {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 1rem;
+  span > h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  span > p {
+    text-transform: capitalize;
+  }
+}
+
+#experience > .wrapper > .ratings > div {
+  margin: 2vh 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  p {
+    font-weight: bold;
+  }
+}
+
+.green-underline::after {
+  content: '';
+  display: block;
+  width: 5%;
+  border-bottom: green 2px solid;
+  transition: all 0.4s ease-in-out;
+  .green-underline:after:hover {
+    width: 100%;
+  }
+}
+
+#courses > .wrapper p {
+  margin-bottom: 5vh;
+}
+
+#courses > .wrapper span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+//
+footer {
+  background-color: rgba($color: #000000, $alpha: 0.95);
+}
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  div {
+    margin: 0 auto;
+  }
+  ul li {
+    margin-bottom: 1.2vh;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .courses,
+  .grad,
+  .ratings > div {
+    grid-template-columns: 1fr;
+    .course {
+      padding: 2rem;
+    }
+  }
+
+  #experience > .wrapper > .ratings {
+    grid-template-columns: 1fr;
+  }
+
+  .grad {
+    text-align: center;
+    img {
+      margin-bottom: 2vh;
+    }
+  }
+
+  #courses {
+    text-align: center;
+    ol {
+      text-align: initial;
+    }
+  }
+  #courses > .wrapper span,
+  #courses > .wrapper span * {
+    grid-template-columns: 1fr;
+    padding: 0.5rem 0;
+  }
+
+  .footer-wrapper {
+    grid-template-columns: 1fr 1fr;
+    div:last-child {
+      margin: 5vh 0;
+    }
+    input {
+      color: #fff;
+    }
+  }
+}
