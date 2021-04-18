@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styling/style.css" />
-    <title>HME Bootcamp</title>
+    <title>bootcamp</title>
   </head>
   <body>
     <!-- navbar -->
@@ -64,8 +64,6 @@
       </li>
     </ul>
 
-    <!-- hero section -->
-
     <!-- hero -->
     <main class="hero">
       <img src="" name="slider" alt="" width="100%" />
@@ -76,107 +74,47 @@
           Learn How To < / Code>
         </h1>
         <span>
-          <a href="#" class="btn white-text green darken-2 scale">Our Courses</a
+          <a href="courses.html" class="btn white-text green darken-2 scale"
+            >Our Courses</a
           >&nbsp;&nbsp;
-          <a href="#" class="btn white-text green darken-2 scale">Our Campus</a>
+          <a href="contact.html" class="btn white-text green darken-2 scale"
+            >Our Campus</a
+          >
         </span>
       </div>
     </main>
 
-    <!-- grads section -->
-
-    <!-- bootcamp grads -->
-    <section id="grads">
+    <section id="contact-us">
+      <h2 class="center-align">Contact Us</h2>
       <div class="wrapper">
-        <h3 class="center">Meet Our Bootcamp Grads</h3>
-        <br /><br />
-        <p class="center">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum,
-          officiis dolores cumque optio consequatur adipisci temporibus porro
-          quisquam consectetur iste maxime iure magni cum accusantium!
-        </p>
-        <br /><br />
-        <div class="grad">
-          <div>
-            <img
-              src="../images/alumni1.jpeg"
-              class="responsive-img center-align"
-              alt=""
-            />
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda laudantium, eum commodi maxime impedit, optio
-              necessitatibus, eveniet quo molestias debitis culpa distinctio
-              quidem cum dolorum quis! Error eos porro modi consequatur eius
-              repudiandae at assumenda?
-            </p>
-          </div>
-          <div>
-            <img
-              src="../images/alumni2.jpeg"
-              class="responsive-img center-align"
-              alt=""
-            />
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda laudantium, eum commodi maxime impedit, optio
-              necessitatibus, eveniet quo molestias debitis culpa distinctio
-              quidem cum dolorum quis! Error eos porro modi consequatur eius
-              repudiandae at assumenda?
-            </p>
-          </div>
-          <div>
-            <img
-              src="../images/you.jpeg"
-              class="responsive-img center-align"
-              alt=""
-            />
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Assumenda laudantium, eum commodi maxime impedit, optio
-              necessitatibus, eveniet quo molestias debitis culpa distinctio
-              quidem cum dolorum quis! Error eos porro modi consequatur eius
-              repudiandae at assumenda?
-            </p>
-          </div>
+        <div class="contact-info">
+          <h5>GET IN TOUCH WITH US</h5>
+          <ul>
+            <li><i class="las la-phone"></i>&nbsp; + 44 (0) 123 456 789</li>
+            <li><i class="las la-at"></i>&nbsp; info@bootcamp.co.uk</li>
+            <li>
+              <i class="las la-map-marker"></i>&nbsp; Location: 123 Road ,
+              London ABC 123
+            </li>
+          </ul>
+        </div>
+        <div class="message">
+          <h5>SEND US A MESSAGE</h5>
+          <form>
+            <label>Name</label>
+            <input type="text" required />
+            <label>Email</label>
+            <input type="email" required />
+            <label for="">Message</label><br />
+            <textarea class="materialize-textarea" required></textarea>
+            <input type="submit" class="btn green darken-2" value="Submit" />
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- Companies That Hire Our Alumni section -->
-    <section id="success">
-      <div class="wrapper">
-        <h3>Companies That Hire Our Alumni</h3>
-        <span>
-          <span>
-            <i class="lab la-facebook-f la-2x"></i>
-            <p>Facebook</p>
-          </span>
-          <span>
-            <i class="lab la-2x la-twitter"></i>
-            <p>Twitter</p>
-          </span>
-          <span>
-            <i class="lab la-2x la-apple"></i>
-            <p>Apple</p>
-          </span>
-          <span>
-            <i class="lab la-2x la-spotify"></i>
-            <p>Spotify</p>
-          </span>
-          <span>
-            <i class="lab la-2x la-amazon"></i>
-            <p>Amazon</p>
-          </span>
-          <span>
-            <i class="lab la-2x la-microsoft"></i>
-            <p>Microsoft</p>
-          </span>
-        </span>
-        <a href="#!" class="btn green darken-2 white-text scale">Read More</a>
-      </div>
-    </section>
-
+    <!-- google map -->
+    <div id="map"></div>
     <!-- footer -->
     <footer class="white-text">
       <div class="wrapper">
@@ -217,5 +155,12 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../javascript/script.js"></script>
+    <script src="../javascript/map.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK0IDvKqR_rDn0S9toBcS5mxuybug2r6A&callback=initMap"
+      type="text/javascript"
+    ></script>
   </body>
 </html>
